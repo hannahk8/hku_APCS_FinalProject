@@ -1,0 +1,7 @@
+package tapofwar.newpackage;
+
+import javax.swing.JPanel;
+
+public class ImageImplement extends JPanel {
+
+}
