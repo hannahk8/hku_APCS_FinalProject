@@ -1,0 +1,29 @@
+package tapofwar.newpackage;
+import java.awt.*;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+
+public class TestSwing3 extends JFrame {
+    
+    public static void main(String[] args) {    
+        new TestSwing3().start();
+    }
+    
+    public void start(){
+    	ImageImplement panel = new ImageImplement(new ImageIcon("src/bigseashore.png").getImage());
+    	add(panel);
+    	
+    	JLabel label1 = new JLabel("Test");
+    	add(label1);
+    	
+    	
+    	
+    	setVisible(true);
+    	setSize(1000,550);
+    	setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+}

@@ -1,0 +1,27 @@
+package tapofwar.newpackage;
+import java.awt.BorderLayout;
+
+
+
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class TestSwing3 extends JFrame {
+    
+    public static void main(String[] args) {    
+        new TestSwing3().start();
+    }
+    
+    public void start(){
+    	ImageImplement panel = new ImageImplement(new ImageIcon("orange.png").getImage());
+    	add(panel);		
+    	setVisible(true);
+    	setSize(500,500);
+    	setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+}

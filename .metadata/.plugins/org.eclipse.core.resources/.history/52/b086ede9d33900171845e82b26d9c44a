@@ -1,0 +1,35 @@
+package tapofwar.newpackage;
+import java.awt.*;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+
+public class WORDS extends JFrame {
+    
+    public static void main(String[] args) {    
+        new WORDS().start();
+    }
+    
+    public void start(){
+    	setTitle("Tap of War Game");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        JLabel background = new JLabel(new ImageIcon("src/bigseashore.png"));
+        background.setLayout(new BorderLayout());
+        add(background);
+
+
+        JLabel label = new JLabel("TAP OF WAR");
+        label.setFont(label.getFont().deriveFont(Font.BOLD, 48));
+        label.setForeground(Color.BLACK);
+        label.setVerticalAlignment(JLabel.CENTER);
+        background.add(label);
+
+        pack();
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+}
