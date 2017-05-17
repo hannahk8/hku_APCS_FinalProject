@@ -1,12 +1,15 @@
 package tapofwar.newpackage;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import java.awt.*;
 
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 
 public class YAY2 extends JFrame {
     
@@ -20,8 +23,11 @@ public class YAY2 extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         //set background
-        JLabel background = new JLabel(new ImageIcon("src/beachbackground.gif"));
+        JLabel background = new JLabel(new ImageIcon("src/flowers.gif"));
         background.setLayout(new BorderLayout());
+        ImageIcon image = new ImageIcon("src/beachbackground.gif"));
+        add(image);
+
         add(background);
 
         //set game title and align
@@ -34,6 +40,39 @@ public class YAY2 extends JFrame {
         button.setSize(100, 30);
         button.setLocation(450, 300);
         background.add(button);
+        
+        button.addActionListener(new ActionListener()
+        {
+          public void actionPerformed(ActionEvent e)
+          {
+          	button.setVisible(false);
+            background.setIcon(new ImageIcon(("src/field.jpg")));
+            background.setLayout(new BorderLayout());
+            setSize(1920, 1080);
+          }
+        });
+        
+        
+        
+        /*if(button.getModel().isPressed()){
+        	background.setIcon(null);
+        	JLabel background2 = new JLabel(new ImageIcon("src/nonmovingbeach.jpg"));
+            background2.setLayout(new BorderLayout());
+            add(background2);
+        }*/
+        
+        
+        
+        /*button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                  // this makes sure the button you are pressing is the button variable
+                  if(e.getSource() == button) {
+                	  JLabel background2 = new JLabel(new ImageIcon("src/nonmovingbeach.jpg"));
+                      background2.setLayout(new BorderLayout());
+                      add(background2);     
+                  }
+            }
+        });*/
         
         //set game title font
         label.setFont(label.getFont().deriveFont(Font.BOLD, 48));
