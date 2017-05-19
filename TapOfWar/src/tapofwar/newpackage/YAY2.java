@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 
 import java.awt.*;
 
+import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -17,7 +18,8 @@ public class YAY2 extends JFrame {
         new YAY2().start();
     }
     
-    public void start(){
+    public void start(){    	
+
     	//set tab title and exit button
     	setTitle("Tap of War Game");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -25,9 +27,6 @@ public class YAY2 extends JFrame {
         //set background
         JLabel background = new JLabel(new ImageIcon("src/flowers.gif"));
         background.setLayout(new BorderLayout());
-        ImageIcon image = new ImageIcon("src/beachbackground.gif"));
-        add(image);
-
         add(background);
 
         //set game title and align
@@ -38,41 +37,19 @@ public class YAY2 extends JFrame {
         //start button
         JButton button = new JButton("START");
         button.setSize(100, 30);
-        button.setLocation(450, 300);
+        button.setLocation(600, 300);
         background.add(button);
         
+        //button pressed action
         button.addActionListener(new ActionListener()
         {
           public void actionPerformed(ActionEvent e)
           {
           	button.setVisible(false);
-            background.setIcon(new ImageIcon(("src/field.jpg")));
+            background.setIcon(new ImageIcon(("src/TapWarArena 2.png")));
             background.setLayout(new BorderLayout());
-            setSize(1920, 1080);
           }
         });
-        
-        
-        
-        /*if(button.getModel().isPressed()){
-        	background.setIcon(null);
-        	JLabel background2 = new JLabel(new ImageIcon("src/nonmovingbeach.jpg"));
-            background2.setLayout(new BorderLayout());
-            add(background2);
-        }*/
-        
-        
-        
-        /*button.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                  // this makes sure the button you are pressing is the button variable
-                  if(e.getSource() == button) {
-                	  JLabel background2 = new JLabel(new ImageIcon("src/nonmovingbeach.jpg"));
-                      background2.setLayout(new BorderLayout());
-                      add(background2);     
-                  }
-            }
-        });*/
         
         //set game title font
         label.setFont(label.getFont().deriveFont(Font.BOLD, 48));
